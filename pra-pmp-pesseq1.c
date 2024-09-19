@@ -36,7 +36,7 @@ int main() {
 	int* v = criarVetor(n);
 	
 	printf("melhor caso: %d\n", pesquisaSequencial(v[0], v, n));
-	printf("pior caso: %d\n", pesquisaSequencial(v[11], v, n));
+	printf("pior caso: %d\n", pesquisaSequencial(n + 1, v, n));
 	printf("caso medio: %d\n", pesquisaSequencial(v[rand() % n], v, n));
 	
 	return 0;
