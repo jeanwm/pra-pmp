@@ -29,7 +29,7 @@ int pesquisaInterpolacao(int chave, int v[], int n) {
 	contador++;
 	if (v[ini] == v[fim]) return v[ini] == chave ? ini : -1;
 	
-	contador++;
+	contador += 3;
 	while (ini <= fim && chave >= v[ini] && chave <= v[fim]) {
 		contador++;
 		if (ini == fim) return v[ini] == chave ? ini : -1;
@@ -47,7 +47,7 @@ int pesquisaInterpolacao(int chave, int v[], int n) {
 			ini = meio + 1;
 		}
 		
-		contador++;
+		contador += 4;
 	}
 	
 	return contador; 
@@ -57,8 +57,6 @@ int main() {
 	int n = 1000;
 	int* v = criaVetor(n);
 	
-	printf("melhor caso: %d\n", pesquisaInterpolacao(v[(n - 1) / 2], v, n));
-	printf("pior caso: %d\n", pesquisaInterpolacao(n + 1, v, n));
 	printf("caso medio: %d\n", pesquisaInterpolacao(v[rand() % n], v, n));
 	
 	return 0;
