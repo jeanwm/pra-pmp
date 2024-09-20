@@ -48,7 +48,7 @@ int pesquisaBinaria(int chave, int v[], int n) {
 }
 
 int main() {
-	int n = 100000;
+	int n = 10;
 	int* v = criaVetor(n);
 	
 	printf("melhor caso: %d\n", pesquisaBinaria(v[(n - 1) / 2], v, n));
